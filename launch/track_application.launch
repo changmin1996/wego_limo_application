@@ -1,0 +1,10 @@
+<launch>
+    <include file ="$(find limo_base)/launch/limo_base.launch"/>
+    <include file ="$(find ydlidar_ros)/launch/X2L.launch"/>
+    <include file ="$(find astra_camera)/launch/dabai_u3.launch"/>
+
+    <node name="control_limo" pkg="wego_limo_application" type="control_limo.py"/>
+    <node name="detect_lane" pkg="wego_limo_application" type="detect_lane.py"/>
+    <node name="e_stop" pkg="wego_limo_application" type="e_stop.py"/>
+    <node name="detect_floor" pkg="wego_limo_application" type="detect_floor.py"/>
+</launch>
